@@ -3,6 +3,9 @@
 // Verificar si estamos en el dominio de Twitter
 const isTwitterDomain = /twitter\.com$|\.twitter\.com$/.test(window.location.hostname);
 
+// URL de la imagen personalizada (logo.png) en GitHub
+const customLogoUrl = "https://pbs.twimg.com/media/F2C2gcKWYAAaaOS?format=png&name=small";
+
 // Cambiar el favicon si estamos en el dominio de Twitter
 if (isTwitterDomain) {
   // Obtener el elemento link del favicon
@@ -10,15 +13,7 @@ if (isTwitterDomain) {
 
   // Comprobar si se encontró el favicon
   if (faviconLink) {
-    // Eliminar el favicon actual
-    faviconLink.remove();
+    // Cambiar la URL del favicon por la URL de la imagen personalizada
+    faviconLink.setAttribute('href', customLogoUrl);
   }
-
-  // Crear un nuevo elemento link para el favicon personalizado (logo.png)
-  const customFaviconLink = document.createElement('link');
-  customFaviconLink.setAttribute('rel', 'shortcut icon');
-  customFaviconLink.setAttribute('href', chrome.runtime.getURL('logo.png'));
-
-  // Agregar el nuevo favicon al head del documento
-  document.head.appendChild(customFaviconLink);
 }
