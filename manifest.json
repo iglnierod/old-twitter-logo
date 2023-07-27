@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Old Twitter Logo",
+  "version": "1.0",
+  "description": "Change new Twitter logo (X) to the classic one",
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*", "*://*.twitter.com/*"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
