@@ -10,10 +10,6 @@ const customLogoUrl = "https://pbs.twimg.com/media/F2C2gcKWYAAaaOS?format=png&na
 if (isTwitterDomain) {
   // Obtener el elemento link del favicon
   const faviconLink = document.querySelector('link[rel="shortcut icon"]');
+  faviconLink ? faviconLink?.setAttribute('href', customLogoUrl) : null;
 
-  // Comprobar si se encontró el favicon
-  if (faviconLink) {
-    // Cambiar la URL del favicon por la URL de la imagen personalizada
-    faviconLink.setAttribute('href', customLogoUrl);
-  }
 }
