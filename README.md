@@ -5,4 +5,6 @@
 3. Activate developer mode
 4. Select 'Load unpacked' and select the old-twitter-logo folder
 5. Enjoy!
+## Versions
+> 1.2 - Changes header logo too (Fails on refresh)
 ### Made by crampy 🐦
