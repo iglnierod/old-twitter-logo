@@ -1,7 +1,7 @@
 // content_script.js
 
 // Verificar si estamos en el dominio de Twitter
-const isTwitterDomain = /twitter\.com$|\.twitter\.com$/.test(window.location.hostname);
+const isTwitterDomain = /x\.com$|\.x\.com$/.test(window.location.hostname);
 
 // Logo Twitter Azul
 const customLogoUrl = "https://pbs.twimg.com/media/F2C2gcKWYAAaaOS?format=png&name=small";
